@@ -17,9 +17,9 @@ jobs:
       - id: step1
         run: echo "::set-output name=test::hello"
       - id: step2
-        run: 
-          echo "::set-output name=test::world"
-          echo ${{ steps.step2.outputs.test }}
+        run: echo "::set-output name=test::world"
+      - id: step3  
+        run: echo ${{ steps.step2.outputs.test }}
   job2:
     runs-on: ubuntu-latest
     needs: job1
