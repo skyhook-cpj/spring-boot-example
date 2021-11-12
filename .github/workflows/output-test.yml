@@ -28,4 +28,4 @@ jobs:
     steps:
       - run: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
       - run: echo ${{needs.job1.steps.step1.outputs.test}} ${{needs.job1.steps.step2.outputs.test}}
-      - run: echo ${{abc}}
+      - run: echo ${{env.abc}}
