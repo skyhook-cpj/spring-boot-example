@@ -14,4 +14,12 @@ jobs:
         run: echo "hello my world"
       - id: step2
         run: echo $NAME
-
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    if: ${{ failure(job1) }}
+    steps:
+      - id: step1
+        run: echo "hello my world"
+      - id: step2
+        run: echo $NAME
