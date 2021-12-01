@@ -1,0 +1,14 @@
+name: if-test
+
+on:
+  workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env:
+      name: cpj
+    if: ${{name}} = cpj
+    steps:
+      - id: step1
+        run: echo "hello my world"
