@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       name: cpj
-    if: ${{name}} = cpj
+    if: ${{ ${name} == cpj }}
     steps:
       - id: step1
         run: echo "hello my world"
