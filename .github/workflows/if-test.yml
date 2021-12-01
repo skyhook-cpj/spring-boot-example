@@ -8,7 +8,10 @@ env:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    if: ${{ env.NAME == 'cpj' }}
+    if: ${{ always() }}
     steps:
       - id: step1
         run: echo "hello my world"
+      - id: step2
+        run: echo $NAME
+
