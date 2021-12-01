@@ -3,7 +3,7 @@ name: if-test
 on:
   workflow_dispatch
 env:
-      NAME: cpj
+  NAME: cpj
 
 jobs:
   job1:
