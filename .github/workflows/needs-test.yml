@@ -1,4 +1,4 @@
-name: if-test
+name: needs-test
 
 on:
   workflow_dispatch
